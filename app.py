@@ -3,16 +3,18 @@ import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
+from datetime import datetime # Make sure to import datetime
 
 # --- Page Configuration ---
 st.set_page_config(page_title="Options Open Interest Analyzer", layout="wide")
 st.title("📈 Options Open Interest Analyzer")
 
+# --- User Inputs in the Sidebar ---
+st.sidebar.header("User Inputs")
+
 # --- ADD THIS LINE ---
 st.sidebar.caption(f"Data refreshed: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} UTC")
 
-# --- User Inputs in the Sidebar ---
-st.sidebar.header("User Inputs")
 # Input box for the ticker symbol
 ticker_symbol = st.sidebar.text_input("Enter Stock Ticker:", "PLTR").upper()
 
