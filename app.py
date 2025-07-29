@@ -8,6 +8,9 @@ import matplotlib.ticker as mticker
 st.set_page_config(page_title="Options Open Interest Analyzer", layout="wide")
 st.title("📈 Options Open Interest Analyzer")
 
+# --- ADD THIS LINE ---
+st.sidebar.caption(f"Data refreshed: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} UTC")
+
 # --- User Inputs in the Sidebar ---
 st.sidebar.header("User Inputs")
 # Input box for the ticker symbol
